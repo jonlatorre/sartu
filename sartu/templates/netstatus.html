@@ -1,0 +1,34 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load url from future %}
+
+{% block head_title %}{% trans "Netstatus" %}{% endblock %}
+
+{% block body %}
+<h1>Estado de la red de Sartu</h1>
+
+    <div class="row-fluid">
+  
+    <div class="span4">
+	<table>
+     <tr>
+		 <td>Conexión a Internet</td><td><button class="btn btn-success disabled" type="button">Funciona</button></td>
+	 </tr>
+     <tr> 
+		 <td>Conexión a Portal del Rey</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td>
+	 </tr>
+     <tr> 
+		 <td>Máquina IBSartu 01</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+	 </tr>
+	 <tr> 
+		 <td>Máquina IBSartu 02</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+	 </tr>
+	 <tr> 
+		 <td>Máquina IBSartu 03</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+	 </tr>
+     </table>
+    </div>
+    </div>
+
+{% endblock %}

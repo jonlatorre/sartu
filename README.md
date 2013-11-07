@@ -1,21 +1,15 @@
-pinax-project-account
+Aplicación de ocntrol Sartu
 =====================
 
-a starter project the incorporates account features from django-user-accounts
 
+Esta es una pequeña aplicaciñon para controlar la red de la asociación Sartu Alava
 
-Usage:
+Está basada en el proyecto https://github.com/pinax/pinax-project-account
 
-    django-admin.py startproject --template=https://github.com/pinax/pinax-project-account/zipball/master <project_name>
-
-Getting Started:
-
-    pip install virtualenv
-    virtualenv mysiteenv
-    source mysiteenv/bin/activate
-    pip install Django==1.4.5
-    django-admin.py startproject --template=https://github.com/pinax/pinax-project-account/zipball/master mysite
-    cd mysite
-    pip install -r requirements.txt
-    python manage.py syncdb
-    python manage.py runserver
+Para ponerla en marcha
+ * git clone https://github.com/jonlatorre/sartu.git
+ * cd sartu
+ * pip install -r requirements
+ * Editar la conf
+ * ./manage syncdb
+ * ./manage runserver

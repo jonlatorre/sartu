@@ -131,12 +131,13 @@ INSTALLED_APPS = [
     "django_forms_bootstrap",
     
     # external
-    "account",
+    #"account",
     "metron",
     "eventlog",
     
     # project
     "sartu",
+    "netstatus",
 ]
 
 # A sample logging configuration. The only tangible logging
