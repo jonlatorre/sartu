@@ -1,4 +1,4 @@
-Aplicación de ocntrol Sartu
+Aplicación de control Sartu
 =====================
 
 
@@ -9,6 +9,8 @@ Está basada en el proyecto https://github.com/pinax/pinax-project-account
 Para ponerla en marcha
  * git clone https://github.com/jonlatorre/sartu.git
  * cd sartu
+ * virtualenv .
+ * . ./bin/activate
  * pip install -r requirements
  * Editar la conf
  * ./manage syncdb

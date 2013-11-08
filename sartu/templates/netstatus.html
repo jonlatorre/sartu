@@ -6,17 +6,22 @@
 {% block head_title %}{% trans "Netstatus" %}{% endblock %}
 
 {% block body %}
-<h1>Estado de la red de Sartu</h1>
 
-    <div class="row-fluid">
+<h1>Estado de la red de Sartu</h1>
+     
+     
+    <div class="row-fluid"  >
   
     <div class="span4">
-	<table>
+		<div id="fotocargando" style="width:100%;text-align: center;">
+                <img src="http://www.lacosox.org/sites/default/files/cargando.gif">
+		</div>
+	<table id="tabla" style="display:none;" >
      <tr>
-		 <td>Conexión a Internet</td><td><button class="btn btn-success disabled" type="button">Funciona</button></td>
+		 <td>Conexión a Internet</td><td><button id="boton-internet" class="btn btn-danger disabled" type="button">No Funciona</button></td>
 	 </tr>
      <tr> 
-		 <td>Conexión a Portal del Rey</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td>
+		 <td>Conexión a Portal del Rey</td><td> <button id="boton-prey" class="btn btn-danger disabled" type="button">No funciona</button> </td>
 	 </tr>
      <tr> 
 		 <td>Máquina IBSartu 01</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
@@ -31,4 +36,32 @@
     </div>
     </div>
 
+{% endblock %}
+
+{% block extra_script %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		console.log("Vamos a llamar a getJSON");
+		$.getJSON("/netstatus/get/",function(data)
+			{
+				console.log("Hemos leido data",data);
+				if (data.internet == 1) {
+					console.log("Hay conexion a inet");
+					$("#boton-internet").removeClass("btn-danger");
+					$("#boton-internet").addClass("btn-success");
+					$("#boton-internet").html("Funciona!");
+				}
+				if (data.prey == 1) {
+					console.log("Hay conexion a prey");
+					$("#boton-prey").removeClass("btn-danger");
+					$("#boton-prey").addClass("btn-success");
+					$("#boton-prey").html("Funciona!");
+				}
+				$('#fotocargando').hide();
+				$('#tabla').fadeIn(500);	
+			}
+		);
+		
+	})
+</script>
 {% endblock %}
