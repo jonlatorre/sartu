@@ -15,19 +15,19 @@
 		</div>
 	<table id="tabla" style="display:none;" >
      <tr>
-		 <td>Conexión a Internet</td><td><button id="boton-internet" class="btn btn-danger disabled" type="button">No Funciona</button></td>
+		 <td>Conexión a Internet</td><td><button id="boton-internet" class="btn btn-danger disabled" type="button"><i class="icon-minus-sign"></i> No Funciona</button></td>
 	 </tr>
      <tr> 
-		 <td>Conexión a Portal del Rey</td><td> <button id="boton-prey" class="btn btn-danger disabled" type="button">No funciona</button> </td>
+		 <td>Conexión a Portal del Rey</td><td> <button id="boton-prey" class="btn btn-danger disabled" type="button"><i class="icon-minus-sign"></i> No funciona</button> </td>
 	 </tr>
      <tr> 
-		 <td>Máquina IBSartu 01</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+		 <td>Máquina IBSartu 01</td><td> <button class="btn btn-danger disabled" type="button"><i class="icon-minus-sign"></i> No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
 	 </tr>
 	 <tr> 
-		 <td>Máquina IBSartu 02</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+		 <td>Máquina IBSartu 02</td><td> <button class="btn btn-danger disabled" type="button"><i class="icon-minus-sign"></i> No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
 	 </tr>
 	 <tr> 
-		 <td>Máquina IBSartu 03</td><td> <button class="btn btn-danger disabled" type="button">No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
+		 <td>Máquina IBSartu 03</td><td> <button class="btn btn-danger disabled" type="button"><i class="icon-minus-sign"></i> No funciona</button> </td><td><button class="btn btn-info" type="button">Conectate</button></td>
 	 </tr>
      </table>
     </div>
@@ -46,13 +46,13 @@
 					console.log("Hay conexion a inet");
 					$("#boton-internet").removeClass("btn-danger");
 					$("#boton-internet").addClass("btn-success");
-					$("#boton-internet").html("Funciona!");
+					$("#boton-internet").html("<i class='icon-ok'></i> Funciona!");
 				}
 				if (data.prey == 1) {
 					console.log("Hay conexion a prey");
 					$("#boton-prey").removeClass("btn-danger");
 					$("#boton-prey").addClass("btn-success");
-					$("#boton-prey").html("Funciona!");
+					$("#boton-prey").html("<i class='icon-ok'></i> Funciona!");
 				}
 				$('#fotocargando').hide();
 				$('#tabla').fadeIn(500);	
